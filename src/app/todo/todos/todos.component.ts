@@ -20,7 +20,7 @@ export class TodosComponent implements OnInit {
     this.todos = [{ label, id: this.todos.length + 1 }, ...this.todos];
   }
 
-  completeTodo(todo) {
+  completeTodo({todo}) {
     this.todos = this.todos.map(
       item => item.id === todo.id ? Object.assign({}, item, { complete: true }) : item
     );
